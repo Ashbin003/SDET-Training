@@ -1,0 +1,17 @@
+Typescript vs Javascript
+________________________
+
+Ts - It is an object oriented programming language
+Js - It is a scripting language
+
+Ts - Supports static typing
+Js - Supports dynamic typing
+
+Ts - Supports interface
+Js - does not support interfaces
+
+Ts - supports REST parameters
+Js - does not support REST parameters
+
+Ts - supports modules
+Js - does not support modules
