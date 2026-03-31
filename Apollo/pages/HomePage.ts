@@ -54,13 +54,13 @@ export class HomePage extends BasePage {
 
     async addMedicineByHealthCondition(page: Page, healthConditionName: string, medicineName: string) {
         await this.clickHealthConditionElement(page, healthConditionName);
-        await page.waitForTimeout(5000);
+        await page.waitForTimeout(4000);
 
         const addButton = await this.addMedicineButton(page, medicineName);
         await page.waitForTimeout(2000);
         await addButton.click();
 
-        await page.waitForTimeout(3000);
+        await page.waitForTimeout(1000);
     }
 
     async viewCart(page: Page) {
@@ -129,11 +129,11 @@ export class HomePage extends BasePage {
     async addMedicineByBrand(page : Page, brandName : string, medicineName : string){
         await this.clickBrandElement(page, brandName);
 
-        await page.locator(`//a[@aria-label="${medicineName}"]`).waitFor();
+        await page.waitForTimeout(3000);
 
-        await this.removePopups();
-
-        await page.locator(`//a[@aria-label="${medicineName}"]/parent::div//button`).click();
+        const addBtn = await this.addMedicineButton(page, medicineName);
+        await page.waitForTimeout(2000);
+        await addBtn.click();
 
         await page.waitForTimeout(3000);
     }
