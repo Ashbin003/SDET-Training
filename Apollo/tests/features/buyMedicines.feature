@@ -1,4 +1,4 @@
-Feature: Buy Medicines Functionality
+Feature: Buy Medicines Page Functionality
 
 Scenario: Buying a medicine for a specific health condition
     Given user is on Buy Medicines page
